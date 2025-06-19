@@ -1,0 +1,51 @@
+body{
+    display: flex;
+    margin: 0;
+    border: 0;
+    align-items: center;
+    justify-content: center;
+    padding: 10%;
+
+
+    
+}
+
+main{
+    text-align: center;
+    display: flex;
+    height: 600px;
+    width: 600px;
+    flex-direction: column;
+    gap: 20px;
+    border:  10px solid #00000041;
+    background-color: #ffe4c4;
+    border-radius: 13px;
+    padding: 20px;
+    
+}
+main label{font-weight: bold;
+    
+
+
+}
+
+main input,
+main textarea {
+    padding: 0.8em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+}
+main button {
+    padding: 0.8em;
+    border: 2px solid black;
+    background-color: #0c4a6e;
+    color: white;
+    font-size: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+main button:hover {
+background-color: #16690bbb;
+}
