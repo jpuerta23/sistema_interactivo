@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const inputAge = document.getElementById('age');
     const errorName = document.getElementById('error-name');
     const errorAge = document.getElementById('error-age');
+    const correct = document.getElementById('correct')
 
     btnAcceder.addEventListener('click', function () {
         const nameValue = inputName.value.trim();
@@ -32,9 +33,20 @@ document.addEventListener('DOMContentLoaded', function () {
             isValid = false;
         }
 
-        // Si todo está bien
-        if (isValid) {
-            document.getElementById('Login-btn').textContent =  `¡Bienvenido/a, ${nameValue}! Edad: ${ageValue} años. `;
+
+
+
+           // Mostrar mensaje si todo es válido
+            if (isValid) {
+            if (Number(ageValue) >= 18) {
+                correct.textContent = `¡Bienvenido/a, ${nameValue}! Tienes ${ageValue} años, eres mayor de edad ¡Sigue Desarrollando!`;
+            } else {
+                correct.textContent = `Hola, ${nameValue}. Tienes ${ageValue} años, eres menor de edad ¡Sigue aprendiendo y disfrutando del código!.`;
+            }
         }
+
+        document.getElementById("name").value = "";
+        document.getElementById("age").value = "";
     });
 });
+
